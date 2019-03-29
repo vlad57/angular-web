@@ -16,7 +16,7 @@ export class AdminFilmAddComponent implements OnInit {
   mutations: Mutations = new Mutations();
   filmModel: Film = new Film();
   loading: boolean;
-  loadingFilm: boolean;
+  addFilmSidebar = true;
   toggleSidebar = false;
   addDone: boolean;
 
