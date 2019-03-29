@@ -50,7 +50,9 @@ export class AppComponent implements OnInit {
     localStorage.setItem('token', '');
     this.apollo.getClient().resetStore().catch(error => { console.log(error); });
     this.isAuth = false;
+    this.clickedUserDropDown = false;
     this.router.navigate(['/']).catch(error => { console.log(error); });
+    window.location.reload();
   }
 
   showDropDownButton() {
