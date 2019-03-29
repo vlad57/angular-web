@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-4 mr-auto ml-auto">
+    <div>
+      <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label class="col-form-label" for="emailInput">Email</label>
+          <input type="email" class="form-control" placeholder="Email" id="emailInput" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="passwordInput">Password</label>
+          <input type="password" class="form-control" placeholder="Password" id="passwordInput" formControlName="password">
+        </div>
+        <button class="btn btn-primary">Log in</button>
+      </form><br>
+      <div *ngIf="isGoodAuth == false" class="bs-component">
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>Oh shit!</strong> Bad email or password.
+        </div>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+    </div>
+    <div style="text-align: center;">
+      <a href="signup">S'inscrire</a>
+    </div>
+  </div>
+</div>

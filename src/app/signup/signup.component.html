@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-lg-4 mr-auto ml-auto">
+    <div>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label class="col-form-label" for="usernameInput">Username</label>
+          <input type="text" class="form-control" placeholder="Username" id="usernameInput" formControlName="username">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="emailInput">Email</label>
+          <input type="email" class="form-control" placeholder="Email" id="emailInput" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="passwordInput">Password</label>
+          <input type="password" class="form-control" placeholder="Password" id="passwordInput" formControlName="password">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="confirmPasswordInput">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPasswordInput" formControlName="confirmPassword">
+        </div>
+        <button class="btn btn-primary">S'inscrire</button>
+      </form><br>
+      <div *ngIf="isGoodSign == false" class="bs-component">
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>Oh shit!</strong> Bad email or password.
+        </div>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+    </div>
+  </div>
+</div>
+
+
+

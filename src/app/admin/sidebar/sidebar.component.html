@@ -1,0 +1,32 @@
+<nav id="sidebar" [ngClass]="toggleSidebar ? 'active' : ''">
+  <div class="sidebar-header">
+    <h3 style="text-align: center"><a href="admin/home">Admin</a></h3>
+  </div>
+
+  <ul class="list-unstyled components">
+    <p>Films</p>
+    <li [ngClass]="listF ? 'active' : ''">
+      <a href="admin/films-list">Liste des films</a>
+    </li>
+    <li>
+      <a href="admin/film-add">Ajouter</a>
+    </li>
+  </ul>
+
+  <ul class="list-unstyled components">
+    <p>Séries</p>
+    <li>
+      <a href="#">Liste des séries</a>
+    </li>
+    <li>
+      <a href="#">Ajouter</a>
+    </li>
+  </ul>
+
+  <ul class="list-unstyled components">
+    <p>Utilisateurs</p>
+    <li>
+      <a href="#">Liste des utilisateurs</a>
+    </li>
+  </ul>
+</nav>

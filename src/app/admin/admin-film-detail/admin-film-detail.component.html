@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <app-sidebar [toggleSidebar]="toggleSidebar"></app-sidebar>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+        <button type="button" id="sidebarCollapse" class="navbar-btn" [ngClass]="toggleSidebar ? 'active' : ''" (click)="toggleSidebar=!toggleSidebar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-align-justify"></i>
+        </button>
+
+        <!--div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Page</a>
+            </li>
+          </ul>
+        </div-->
+
+      </div>
+    </nav>
+
+    <div class="container">
+      <form (ngSubmit)="updateFilm()">
+        <div class="form-group">
+          <label class="col-form-label" for="name">Name</label>
+          <input type="text" class="form-control" placeholder="Name" id="name" [(ngModel)]="filmModel.name" name="name">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="duration">Duration</label>
+          <input type="text" class="form-control" placeholder="Description" id="duration" [(ngModel)]="filmModel.duration" name="duration">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="genre">Genre</label>
+          <input type="text" class="form-control" placeholder="Genre" id="genre" [(ngModel)]="filmModel.genre" name="genre">
+        </div>
+        <div class="form-group">
+          <label class="col-form-label" for="description">Description</label>
+          <textarea type="text" class="form-control" id="description" [(ngModel)]="filmModel.description" name="description"></textarea>
+        </div>
+        <button class="btn btn-primary">Modifier</button>
+      </form><br/>
+
+      <div *ngIf="updateDone == false" class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      </div>
+
+      <div *ngIf="updateDone" class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Bien vu morray ! </strong> Mise à jour du film a bien été effecutée.
+      </div>
+
+    </div>
+
+  </div>
+</div>

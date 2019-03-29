@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div *ngIf="isCreatedFilmUser" class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert" (click)="dismissAlert()">&times;</button>
+    <strong>Vous avez ajouté {{getFilmName}} à votre séléction.</strong> Vous pouvez le retrouver sur votre <a href="user/films" class="alert-link">profil</a>.
+  </div>
+
+  <div *ngFor="let film of listFilms">
+    <h2>{{film.name}}</h2>
+    <span style="display: block"><i class="far fa-clock" style="padding-right: 5px;"></i> {{film.duration}} <span style="padding-left: 30px;">{{film.genre}}</span></span><br/>
+    <p style="display: inline-block">{{film.description}}</p>
+    <i *ngIf="isNormalConnected && (getIdFilmUserArray.indexOf(film.id) == -1)" class="fas fa-plus fa-2x float-right" (click)="addFilmToUser(film.id)"></i>
+    <i *ngIf="isNormalConnected && (getIdFilmUserArray.indexOf(film.id) != -1)" class="fas fa-check fa-2x float-right"></i>
+    <div style="clear: both"></div>
+    <a class="btn badge-dark"  href="film-detail/{{film.id}}">Voir</a>
+    <div class="line"></div>
+  </div>
+
+</div>
