@@ -12,7 +12,7 @@ enableProdMode();
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'MyApp';
+  title = 'SerialWatcher';
   pathnameLocationUrl;
   isHomeMenu = false;
   isFilmsMenu = false;
