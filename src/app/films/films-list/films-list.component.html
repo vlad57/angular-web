@@ -1,4 +1,4 @@
-
+<div class="mr-auto ml-auto">
   <div *ngIf="isCreatedFilmUser" class="alert alert-dismissible alert-success">
     <button type="button" class="close" data-dismiss="alert" (click)="dismissAlert()">&times;</button>
     <strong>Vous avez ajouté {{getFilmName}} à votre séléction.</strong> Vous pouvez le retrouver sur votre <a href="user/films" class="alert-link">profil</a>.
@@ -14,3 +14,4 @@
     <a class="btn badge-dark"  href="film-detail/{{film.id}}">Voir</a>
     <div class="line"></div>
   </div>
+</div>
