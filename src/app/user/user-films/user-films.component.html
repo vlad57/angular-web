@@ -19,7 +19,7 @@
           <i *ngIf="filmUser.finish == false" class="far fa-circle fa-2x float-right" (click)="checkFilmAsViewed(filmUser.id, filmUser.film.duration, true)"></i>
           <i *ngIf="filmUser.finish == true" class="far fa-check-circle fa-2x float-right" style="color: #52b452;" (click)="uncheckViewedFilm(filmUser.id, '0', false)"></i>
           <div style="clear: both"></div>
-          <a class="btn badge-dark" href="admin/film-detail/{{filmUser.film.id}}">Détail</a>
+          <!--a class="btn badge-dark" href="admin/film-detail/{{filmUser.film.id}}">Détail</a-->
           <div class="line"></div>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <i *ngIf="filmUserNotViewed.finish == false" class="far fa-circle fa-2x float-right" (click)="checkFilmAsViewed(filmUserNotViewed.id, filmUserNotViewed.film.duration, true)"></i>
           <i *ngIf="filmUserNotViewed.finish == true" class="far fa-check-circle fa-2x float-right" style="color: #52b452;" (click)="uncheckViewedFilm(filmUserNotViewed.id, '0', false)"></i>
           <div style="clear: both"></div>
-          <a class="btn badge-dark" href="admin/film-detail/{{filmUserNotViewed.film.id}}">Détail</a>
+          <!--a class="btn badge-dark" href="admin/film-detail/{{filmUserNotViewed.film.id}}">Détail</a-->
           <div class="line"></div>
         </div>
       </div>
@@ -47,7 +47,7 @@
           <i *ngIf="filmUserViewed.finish == false" class="far fa-circle fa-2x float-right" (click)="checkFilmAsViewed(filmUserViewed.id, filmUserViewed.film.duration, true)"></i>
           <i *ngIf="filmUserViewed.finish == true" class="far fa-check-circle fa-2x float-right" style="color: #52b452;" (click)="uncheckViewedFilm(filmUserViewed.id, '0', false)"></i>
           <div style="clear: both"></div>
-          <a class="btn badge-dark" href="admin/film-detail/{{filmUserViewed.film.id}}">Détail</a>
+          <!--a class="btn badge-dark" href="admin/film-detail/{{filmUserViewed.film.id}}">Détail</a-->
           <div class="line"></div>
         </div>
       </div>
