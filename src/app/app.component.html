@@ -28,7 +28,7 @@
                 <button (click)="showDropDownButton()" class="dropbtn nav-link dropdown-toggle">{{username}}</button>
                 <div id="myDropdown" [ngClass]="clickedUserDropDown ? 'show' : ''" class="dropdown-content">
                   <a href="user">Mon profil</a>
-                  <a *ngIf="isAuth == true" href="/" (click)="logOut()">Log out</a>
+                  <a *ngIf="isAuth == true" (click)="logOut()">Log out</a>
                 </div>
               </li>
             </ul>
