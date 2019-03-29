@@ -49,6 +49,7 @@ export class AppComponent implements OnInit {
   logOut() {
     localStorage.setItem('token', '');
     this.apollo.getClient().resetStore().catch(error => { console.log(error); });
+    this.isAuth = false;
     this.router.navigate(['/']).catch(error => { console.log(error); });
   }
 
