@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'films', component: FilmsListComponent },
-  { path: '**', redirectTo: '/angular', pathMatch: 'full' },
+  { path: '**', redirectTo: 'angular-web', pathMatch: 'full' },
 ];
 
 @NgModule({

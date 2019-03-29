@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
   logOut() {
     localStorage.setItem('token', '');
     this.apollo.getClient().resetStore().catch(error => { console.log(error); });
-    this.router.navigate(['/angular-web']).catch(error => { console.log(error); });
+    this.router.navigate(['angular-web']).catch(error => { console.log(error); });
   }
 
   showDropDownButton() {
