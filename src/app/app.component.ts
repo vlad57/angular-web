@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.pathnameLocationUrl);
     if (this.pathnameLocationUrl === '/angular-web/films') {
+      console.log('FDDPPP');
       this.isFilmsMenu = true;
     }
     if (this.pathnameLocationUrl === '/angular-web/') {
