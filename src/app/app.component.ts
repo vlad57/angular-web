@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     if (this.pathnameLocationUrl === '/films') {
       this.isFilmsMenu = true;
     }
-    if (this.pathnameLocationUrl === '/') {
+    if (this.pathnameLocationUrl === '/angular-web') {
       this.isHomeMenu = true;
     }
     this.apollo.watchQuery<any>({
